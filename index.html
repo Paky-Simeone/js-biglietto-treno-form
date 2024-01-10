@@ -11,33 +11,36 @@
 
 <body class="bg-danger">
   <section>
+
     <h1 class="text-center text-white">Calcola il prezzo del tuo biglietto</h1>
-    <div class="container border rounded p-4 shadow-lg bg-white">
-      <h3 class="text-center text-danger">Nome</h3>
-      <div class="input-group input-group-sm mb-3">
-        <input type="text" id="name" class="form-control border-danger" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Mario Rossi">
-      </div>
-      <h3 class="text-center text-danger">Km da percorrere</h3>
-      <div class="input-group input-group-sm mb-3">
-        <input type="text" id="km" class="form-control border-danger" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km da percorrere">
-      </div>
-      <h3 class="text-center text-danger">Età</h3>
-      <select id="age" class="form-select mb-5 border-danger" aria-label="Default select example">
-        <option value="minorenne">Minorenne</option>
-        <option value="2">Maggiorenne</option>
-        <option value="3">Over 65</option>
-      </select>
-        <div class="container text-center">
-          <input  id="send" class="btn btn-primary align-center" type="button" value="Genera">
-          <input class="btn btn-danger text-center" type="reset" value="Reset">
+    <form action="">
+      <div class="container border rounded p-4 shadow-lg bg-white">
+        <h3 class="text-center text-danger">Nome</h3>
+        <div class="input-group input-group-sm mb-3">
+          <input type="text" id="name" class="form-control border-danger" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Mario Rossi">
         </div>
+        <h3 class="text-center text-danger">Km da percorrere</h3>
+        <div class="input-group input-group-sm mb-3">
+          <input type="text" id="km" class="form-control border-danger" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Km da percorrere">
+        </div>
+        <h3 class="text-center text-danger">Età</h3>
+        <select id="age" class="form-select mb-5 border-danger" aria-label="Default select example">
+          <option value="minorenne">Minorenne</option>
+          <option value="maggiorenne">Maggiorenne</option>
+          <option value="senior">Over 65</option>
+      </select>
+      <div class="container text-center">
+        <input  id="send" class="btn btn-primary align-center" type="button" value="Genera">
+        <input id="annullare" class="btn btn-danger text-center" type="reset" value="Reset">
+      </div>
     </div>
+  </form>
   </section>
           
 
   <section>
     <h2 class="text-center text-white mt-5">Il tuo biglietto</h2>
-    <div class="container">
+    <div id="santino" class="container">
       <table class="table">
         <thead>
           <tr>
@@ -50,7 +53,7 @@
         </thead>
         <tbody>
           <tr>
-            <td id="name"></td>
+            <td id="nome"></td>
             <td id="discount"></td>
             <td id="carriage"></td>
             <td id="code"></td>
